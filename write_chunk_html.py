@@ -127,10 +127,13 @@ def main(params):
 			# write a row of the info
 			html.write('<tr style="background-color:%s"><td>%06d</td>' % (color_str, j))
 			html.write('<td>%s</td>' % sent_id)
-			html.write('<td style="width:400px">%s</td>' % sent_txt)
-			html.write('<td style="width:400px">%s</td>' % chunk_txt)
-			html.write('<td style="width:400px">%s</td>' % NPs_txt)
-			html.write('<td style="width:400px">%s</td>' % NNs_txt)
+			try:
+				html.write('<td style="width:400px">%s</td>' % sent_txt)
+				html.write('<td style="width:400px">%s</td>' % chunk_txt)
+				html.write('<td style="width:400px">%s</td>' % NPs_txt)
+				html.write('<td style="width:400px">%s</td>' % NNs_txt)
+			except Exception as e:
+				print(e)
 			html.write('</td>')
 			html.write('</tr>')
 		html.write('</table>')
