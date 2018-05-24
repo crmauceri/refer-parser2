@@ -21,8 +21,6 @@ import json
 from pyutils.attparser import cocoParser, clefParser
 # set nltk data path
 import nltk
-# nltk.data.path.append('/Users/liyu/Documents/nltk_data')
-nltk.data.path.append('/mnt/ilcompf6d0/user/liyu/Developments/nltk_data')
 
 def analyze(sents):
 	# do some statistics
@@ -46,7 +44,7 @@ def main(params):
 	sents = json.load(open(path_to_parsed_sents))
 
 	# parse attributes for each sent
-	if 'refcoco' in params['dataset']:
+	if 'refcoco' in params['dataset'] or 'sunspot' in params['dataset']:
 		attparser = cocoParser.CocoParser()
 	elif 'refclef' in params['dataset']:
 		attparser = clefParser.ClefParser()

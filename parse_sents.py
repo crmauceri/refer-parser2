@@ -94,7 +94,7 @@ if __name__ == '__main__':
 	parser.add_argument('--data_root', default='data', help='dataset root directory')
 	parser.add_argument('--dataset', default='refcoco', help='dataset name')
 	parser.add_argument('--splitBy', default='unc', help='split By')
-	parser.add_argument('--corenlp_model', default='models/stanford-corenlp-full-2015-01-29')
+	parser.add_argument('--corenlp_model', default='models/stanford-corenlp-full-2015-04-20')
 	parser.add_argument('--num_workers', type=int, default=2, help='number of workers')
 	args = parser.parse_args()
 	params = vars(args)

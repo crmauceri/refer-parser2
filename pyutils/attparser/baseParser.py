@@ -17,7 +17,7 @@ class BaseParser():
         if dataset == 'refclef':
             self.config = config.configCLEF()
             self._headMode = 'vicente'
-        elif dataset == 'refcoco' or dataset == 'refcoco+':
+        elif dataset == 'refcoco' or dataset == 'refcoco+' or dataset == 'sunspot':
             self.config = config.configCOCO()
             self._headMode = 'licheng'
         else:
